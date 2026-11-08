@@ -1,22 +1,10 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
-#include <ncurses.h>
-#include <panel.h>
 
 int main() {
-    //width and height
-    int row, col;
-    char name[] = "Song Downloader";
-
-    initscr();
-    getmaxyx(stdscr, row, col);
-    mvprintw(0, (col-strlen(name))/2, "%s\n", name);
-    printw("Song URL: ");
-    
+    printf("Song Downloader\n");
+    printf("Enter song URL: ");
     char url[256];
-    
-    //ends program
-    getch();
-    endwin();
-    return 0;
+    scanf("%255s", url);
 }
